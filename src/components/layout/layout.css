@@ -10,27 +10,53 @@
 
 .header{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     box-shadow: 0px 5px 25px #e4e4e4;
-    height: 70px;
+    height: 75px;
     position: relative;
-    z-index: 10;
+    z-index: 100;
+    background-color: #FFF;
+}
+
+.logo{
+    margin-left: 200px;
+}
+
+.search{
+    margin-left: 150px;
+}
+
+.search__input{
+    height: 30px;
+    width: 400px;
+    border-radius: 5px;
+    padding: 15px 10px;
+    border: 2px solid #CCC;
+    font-weight: bold;
+}
+
+.count-users{
+    flex: 1;
+    display: flex;
+    justify-content: end;
 }
 
 .body{
     display: flex;
-    height: calc(100% - 70px);
+    height: calc(100% - 75px);
 }
 
 .menu{
     list-style: none;
     width: 200px;
-    box-shadow: 5px 15px 30px #cccccc;
+    box-shadow: 0px 0px 43px #cccccc;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
+    z-index: 99;
 }
 
 .menu li + li{

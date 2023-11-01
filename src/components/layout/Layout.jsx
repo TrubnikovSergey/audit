@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import { io } from "socket.io-client";
+// import { io } from "socket.io-client";
 import "./layout.css";
 import { useRef } from "react";
 
 const Layout = () => {
   const [count, setCount] = useState(0);
-  const socket = io("http://localhost:3001");
+  // const socket = io("http://localhost:3001");
 
   useEffect(() => {
     const connectFn = () => {
@@ -18,12 +18,12 @@ const Layout = () => {
       setCount(data.count);
     };
 
-    socket.on("connect", connectFn);
-    socket.on("countConactions", countConactions);
+    // socket.on("connect", connectFn);
+    // socket.on("countConactions", countConactions);
 
     return () => {
-      socket.off("connect", connectFn);
-      socket.off("countConactions", countConactions);
+      // socket.off("connect", connectFn);
+      // socket.off("countConactions", countConactions);
     };
   }, []);
 
@@ -31,7 +31,15 @@ const Layout = () => {
     <div className="layout-wrapper">
       <div className="layout-container">
         <div className="header">
-          <h1>{`Header (connections - ${count})`}</h1>
+          <div className="logo">
+            <img src="/image/logo.png" alt="logo" />
+          </div>
+          <div className="search">
+            <input className="search__input" type="text" placeholder="ПОИСК" />
+          </div>
+          <div className="count-users">
+            <h1>{`(connections - ${count})`}</h1>
+          </div>
         </div>
         <div className="body">
           <ul className="menu">
