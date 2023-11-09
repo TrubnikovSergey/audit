@@ -5,7 +5,7 @@ export const orders = [
     date: "2017-06-29 12:09:33",
     description: "desc",
     get products() {
-      return products.map((item) => item.order === this.id);
+      return products.filter((item) => item.order === this.id);
     },
   },
   {
@@ -14,7 +14,7 @@ export const orders = [
     date: "2017-06-29 12:09:33",
     description: "desc",
     get products() {
-      return products.map((item) => item.order === this.id);
+      return products.filter((item) => item.order === this.id);
     },
   },
   {
@@ -23,7 +23,7 @@ export const orders = [
     date: "2017-06-29 12:09:33",
     description: "desc",
     get products() {
-      return products.map((item) => item.order === this.id);
+      return products.filter((item) => item.order === this.id);
     },
   },
 ];
@@ -63,6 +63,25 @@ export const products = [
     price: [
       { value: 200, symbol: "USD", isDefault: 0 },
       { value: 1600, symbol: "UAH", isDefault: 1 },
+    ],
+    order: 2,
+    date: "2017-06-29 12:09:33",
+  },
+  {
+    id: 3,
+    serialNumber: 12345,
+    isNew: 1,
+    photo: "pathToFile.jpg",
+    title: "Product 3",
+    type: "Keybord",
+    specification: "Specification 3",
+    guarantee: {
+      start: "2017-06-29 12:09:33",
+      end: "2017-06-29 12:09:33",
+    },
+    price: [
+      { value: 100, symbol: "USD", isDefault: 0 },
+      { value: 200, symbol: "UAH", isDefault: 1 },
     ],
     order: 2,
     date: "2017-06-29 12:09:33",

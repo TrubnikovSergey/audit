@@ -1,7 +1,6 @@
-.goods-list{
+.arrival-list{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    overflow-y: auto;
-    height: 100%;
+    width: 100%;
 }
